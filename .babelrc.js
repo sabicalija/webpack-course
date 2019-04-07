@@ -1,3 +1,14 @@
 module.exports = {
-  plugins: ["@babel/plugin-transform-arrow-functions"]
+  presets: [
+    [
+      "@babel/env",
+      {
+        targets: {
+          browsers: ["last 2 versions"]
+        },
+        debug: true
+      }
+    ]
+  ],
+  plugins: ["@babel/plugin-transform-runtime"]
 };
